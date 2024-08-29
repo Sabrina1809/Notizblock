@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="styles/assets.css">
+    <link rel="shortcut icon" href="./assets/icon/schreiben.png" type="image/x-icon">
+    <title>Notizblock</title>
+</head>
+<body onload="init()">
+
+    <div id="ctn_background_pages_top" class="ctn ctn_background_pages_top">
+        <h1>Notizblock</h1>
+        <section class="note">
+            <h2>Notiz</h2>
+            <div class="input_ctn ctn_section">
+                <div class="input_fields">
+                    <input placeholder="Titel" id="note_title_input" type="text" maxlength="30">
+                    <input placeholder="Notiz" id="note_text_input" type="text" maxlength="200">
+                </div>
+                <button class="button"><img onclick="saveInput()" src="./assets/icon/icons8-speichern-32.png" alt="Icon Diskette - speichern"></button>
+            </div>
+            <div id="error_text"></div>
+        </section>
+        <section class="todo">
+            <h2>offen</h2>
+            <div id="note_ctn" class="ctn_section">Titel + Notiz</div>
+        </section>
+        <section class="done">
+            <h2>erledigt</h2>
+            <div id="note_ctn_done" class="ctn_section"></div>
+        </section>
+    </div>
+    <div id="ctn_background_pages_middle" class="ctn ctn_background_pages_middle"></div>
+    <div id="ctn_background_pages_bottom" class="ctn ctn_background_pages_bottom"></div>
+
+ 
+    <script src="script.js"></script>
+</body>
+
+<!-- <a href="https://www.freepik.com/free-vector/blank-white-notepaper-design_13311374.htm#fromView=search&page=6&position=52&uuid=d46a0700-ef98-4027-b860-f5588deea807">Image by rawpixel.com on Freepik</a> -->
+<!-- <a href="https://www.flaticon.com/de/kostenlose-icons/stift-und-papier" title="stift und papier Icons">Stift und papier Icons erstellt von juicy_fish - Flaticon</a>
+</html>

@@ -1,0 +1,204 @@
+/* quicksand-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/quicksand-v31-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* quicksand-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/quicksand-v31-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+/* rock-salt-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Rock Salt';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/rock-salt-v22-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+/* shadows-into-light-two-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Shadows Into Light Two';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/shadows-into-light-two-v17-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+/* ubuntu-sans-mono-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Ubuntu Sans Mono';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/ubuntu-sans-mono-v1-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+/* ubuntu-sans-mono-600 - latin */
+@font-face {
+font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+font-family: 'Ubuntu Sans Mono';
+font-style: normal;
+font-weight: 600;
+src: url('./fonts/ubuntu-sans-mono-v1-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(48, 48, 48);
+    font-family: 'Shadows Into Light Two';
+    letter-spacing: 1px;
+    font-size: 16px;
+    position: relative;
+}
+
+h1 {
+    font-family: 'Rock Salt';
+    letter-spacing: 3px;
+    text-shadow: 0px 3px 0px white;
+    margin-bottom: 8px;
+}
+
+h2 {
+    font-family: 'Rock Salt';
+    letter-spacing: 3px;
+    font-size: 20px;
+    text-shadow: 0px 1px 0px white;
+}
+h1::after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    margin-top: -23px;
+    width: 260px;
+    height: 0px;
+    border-bottom: 3px solid black; 
+}
+
+.ctn {
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
+    padding: 20px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    background-image: url(./assets/img/papertexture-2061710_1280.jpg);
+    background-size: auto;
+    background-position: center;
+    filter: drop-shadow(0 0 5px black);
+    filter: saturate(0.5);
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    min-height: 600px;
+    transform: translate(-50%);
+}
+
+.ctn_background_pages_top {
+    z-index: 3;
+}
+.ctn_background_pages_middle {
+    z-index: 2;
+    top: 30px;
+    transform: rotate(-2deg);
+    left: 50%;
+    translate: calc(-50% - 3px);
+}
+.ctn_background_pages_bottom {
+    z-index: 1;
+    top: 30px;
+    transform: rotate(1deg);
+    left: 50%;
+    translate: calc(-50% - 2px);
+}
+
+.note, 
+.todo,
+.done {
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.215);
+    margin: 0 auto;
+    width: 93%;
+}
+
+.note {
+    padding-bottom: 7px;
+}
+
+.input_ctn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.input_fields {
+    width: 100%;
+}
+
+#note_title_input,
+#note_text_input {
+    font-family: 'Quicksand';
+    padding: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    border: 1px solid rgba(0,0,0,1);
+
+    &:focus {
+        box-shadow: 0 0 3px rgba(0,0,0,0.5) inset;
+    }
+}
+
+.note_title {
+    font-weight: bold;
+}
+
+#note_ctn,
+#note_ctn_done {
+    text-align: left;
+}
+
+.single_note {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    background-color: rgba(255, 255, 255, 0.35);
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.single_note_text {
+    flex-grow: 1;
+    margin-right: 5px;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+#error_text {
+    background-color: transparent;
+    font-family: 'Quicksand';
+    font-size: 10px;
+    text-align: left;
+    z-index: 4;
+    margin-top: -5px;
+    height: 13px;
+    color: red;
+}
+
